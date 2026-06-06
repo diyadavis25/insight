@@ -18,6 +18,7 @@ export function Contact() {
             <InfoCard icon={Phone} title="Call Us">
               <a href={`tel:${CONTACT.phone}`} className="block hover:text-[var(--royal)]">{CONTACT.phoneDisplay}</a>
               <a href={`tel:${CONTACT.phoneAlt}`} className="block hover:text-[var(--royal)]">{CONTACT.phoneAltDisplay}</a>
+              <a href="tel:+918921571442" className="block hover:text-[var(--royal)]">+91 89215 71442</a>
             </InfoCard>
             <InfoCard icon={Mail} title="Email Us">
               <a href={`mailto:${CONTACT.email}`} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--royal)]">{CONTACT.email}</a>
