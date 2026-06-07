@@ -80,7 +80,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="p-7 sm:p-9 rounded-2xl bg-white border border-border shadow-[var(--shadow-card)]">
+    <form id="contact-form" onSubmit={onSubmit} className="p-7 sm:p-9 rounded-2xl bg-white border border-border shadow-[var(--shadow-card)]">
       <h3 className="font-display text-2xl font-bold text-[var(--royal-deep)] mb-1">Submit Your Inquiry</h3>
       <p className="text-sm text-muted-foreground mb-6">Fill in the details and our consultant will contact you.</p>
 

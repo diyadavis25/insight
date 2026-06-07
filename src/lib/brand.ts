@@ -1,5 +1,5 @@
 export const ASSETS = {
-  logo: "/insight-logo.jpeg",
+  logo: "/logo.png",
   seminar1: "/seminar1.jpeg",
   seminar2: "/seminar2.jpeg",
   seminar3: "/seminar3.jpeg",

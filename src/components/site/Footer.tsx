@@ -1,11 +1,12 @@
 import { ASSETS, CONTACT } from "@/lib/brand";
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   const scroll = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <footer className="bg-[var(--royal-deep)] text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-4 gap-10">
+    <footer className="bg-gradient-to-b from-[var(--royal-deep)] to-[oklch(0.12_0.1_265)] text-white pt-16 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-4 mb-5">
             <div className="bg-white rounded-xl p-2">
@@ -34,8 +35,11 @@ export function Footer() {
           <div className="font-display text-lg font-semibold mb-4">Quick Links</div>
           <ul className="space-y-2.5 text-sm text-white/70">
             {[
-              ["Home", "home"], ["About", "about"], ["Services", "services"],
-              ["Process", "process"], ["Testimonials", "testimonials"], ["Contact", "contact"],
+              ["Home", "home"],
+              ["About", "about"],
+              ["Services", "services"],
+              ["Testimonials", "testimonials"],
+              ["Contact", "contact"],
             ].map(([l, id]) => (
               <li key={id}><button onClick={() => scroll(id)} className="hover:text-[var(--gold)] transition">{l}</button></li>
             ))}
@@ -45,11 +49,22 @@ export function Footer() {
         <div>
           <div className="font-display text-lg font-semibold mb-4">Contact</div>
           <ul className="space-y-3 text-sm text-white/70">
-            <li className="flex gap-3"><MapPin className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" /><span>{CONTACT.address}</span></li>
-            <li className="flex gap-3"><Phone className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" />
-              <span><a href={`tel:${CONTACT.phone}`} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold)]">{CONTACT.phoneDisplay}</a><br /><a href={`tel:${CONTACT.phoneAlt}`} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold)]">{CONTACT.phoneAltDisplay}</a></span>
+            <li className="flex gap-3">
+              <MapPin className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+              <span>{CONTACT.address}</span>
             </li>
-            <li className="flex gap-3"><Mail className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" /><a href={`mailto:${CONTACT.email}`} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--gold)]">{CONTACT.email}</a></li>
+            <li className="flex gap-3">
+              <Phone className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+              <span>
+                <a href={`tel:${CONTACT.phone}`} className="hover:text-[var(--gold)] block">{CONTACT.phoneDisplay}</a>
+                <a href={`tel:${CONTACT.phoneAlt}`} className="hover:text-[var(--gold)] block">{CONTACT.phoneAltDisplay}</a>
+                <a href="tel:+918921571442" className="hover:text-[var(--gold)] block">+91 89215 71442</a>
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Mail className="w-4 h-4 text-[var(--gold)] flex-shrink-0 mt-0.5" />
+              <a href={`mailto:${CONTACT.email}`} className="hover:text-[var(--gold)]">{CONTACT.email}</a>
+            </li>
           </ul>
         </div>
       </div>
