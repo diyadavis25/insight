@@ -8,23 +8,23 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative overflow-hidden" style={{minHeight:"100svh"}}>
+    <section id="home" className="relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <img src={ASSETS.seminar3} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
       </div>
 
-      {/* Consultant image */}
+      {/* Consultant image — right side */}
       <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2">
-        <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover object-top opacity-30 lg:opacity-100" />
+        <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover object-top opacity-20 lg:opacity-100" />
         <div className="absolute inset-y-0 left-0 w-full lg:w-56" style={{background:"linear-gradient(to right, oklch(0.22 0.16 265), transparent)"}} />
         <div className="absolute inset-x-0 top-0 h-40" style={{background:"linear-gradient(to bottom, oklch(0.22 0.16 265 / 0.9), transparent)"}} />
         <div className="absolute inset-x-0 bottom-0 h-40" style={{background:"linear-gradient(to top, oklch(0.22 0.16 265 / 0.9), transparent)"}} />
       </div>
 
-      {/* Content — starts from top with padding */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16 lg:pt-40 lg:pb-24 grid lg:grid-cols-12 gap-10 items-start w-full">
+      {/* Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16 lg:pt-40 lg:pb-24 grid lg:grid-cols-12 gap-10 w-full">
         <div className="lg:col-span-7 text-white">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur text-xs font-medium tracking-wider uppercase mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)]" />
