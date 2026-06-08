@@ -8,7 +8,7 @@ export function Consultant() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-5 gap-10 items-center bg-gradient-to-br from-[var(--royal-deep)] to-[var(--royal)] rounded-3xl overflow-hidden shadow-[var(--shadow-luxury)]">
           <div className="lg:col-span-2 relative h-[420px] lg:h-[520px]">
-            <img src="/aju.jpg" alt="Aju K Rapheal" className="w-full h-full object-cover object-center" />
+            <img src="/aju.jpg" alt="Aju K Rapheal" className="w-full h-full object-cover" style={{objectPosition: "center 15%"}} />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--royal-deep)]/60 to-transparent lg:bg-gradient-to-r" />
           </div>
           <div className="lg:col-span-3 p-8 lg:p-12 text-white">
