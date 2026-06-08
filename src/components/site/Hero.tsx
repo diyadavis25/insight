@@ -9,28 +9,25 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 overflow-hidden">
-      {/* Background */}
+      {/* Background seminar image */}
       <div className="absolute inset-0">
         <img src={ASSETS.seminar3} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,oklch(0.36_0.18_265/0.4),transparent_50%)]" />
       </div>
 
-      {/* Right side consultant image — full bleed, faded edges */}
-      <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
-        <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover object-top" />
-        {/* Fade left edge */}
-        <div className="absolute inset-y-0 left-0 w-48" style={{background:"linear-gradient(to right, oklch(0.22 0.16 265 / 0.95), transparent)"}} />
+      {/* Consultant image — right side on desktop, bottom-right on mobile */}
+      <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2">
+        <img src="/hero-bg.jpg" alt="" className="w-full h-full object-cover object-top opacity-30 lg:opacity-100" />
+        {/* Fade left */}
+        <div className="absolute inset-y-0 left-0 w-full lg:w-56" style={{background:"linear-gradient(to right, oklch(0.22 0.16 265), transparent)"}} />
         {/* Fade top */}
-        <div className="absolute inset-x-0 top-0 h-32" style={{background:"linear-gradient(to bottom, oklch(0.22 0.16 265 / 0.6), transparent)"}} />
+        <div className="absolute inset-x-0 top-0 h-40" style={{background:"linear-gradient(to bottom, oklch(0.22 0.16 265 / 0.9), transparent)"}} />
         {/* Fade bottom */}
-        <div className="absolute inset-x-0 bottom-0 h-32" style={{background:"linear-gradient(to top, oklch(0.22 0.16 265 / 0.8), transparent)"}} />
-        {/* Fade right edge */}
-        <div className="absolute inset-y-0 right-0 w-16" style={{background:"linear-gradient(to left, oklch(0.22 0.16 265 / 0.5), transparent)"}} />
+        <div className="absolute inset-x-0 bottom-0 h-40" style={{background:"linear-gradient(to top, oklch(0.22 0.16 265 / 0.9), transparent)"}} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-12 gap-10 items-center">
-        <div className="lg:col-span-7 text-white reveal">
+        <div className="lg:col-span-7 text-white">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur text-xs font-medium tracking-wider uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--gold)]" />
             Trusted Global Career Consultancy
