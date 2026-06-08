@@ -1,4 +1,4 @@
-import { ASSETS, CONTACT } from "@/lib/brand";
+import { CONTACT } from "@/lib/brand";
 import { Award, Phone, MessageCircle } from "lucide-react";
 
 export function Consultant() {
@@ -8,7 +8,7 @@ export function Consultant() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-5 gap-10 items-center bg-gradient-to-br from-[var(--royal-deep)] to-[var(--royal)] rounded-3xl overflow-hidden shadow-[var(--shadow-luxury)]">
           <div className="lg:col-span-2 relative h-[420px] lg:h-[520px]">
-            <img src={ASSETS.consultant} alt="Aju K Rapheal — Senior Career Consultant" className="w-full h-full object-cover" />
+            <img src="/aju.jpg" alt="Aju K Rapheal" className="w-full h-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--royal-deep)]/60 to-transparent lg:bg-gradient-to-r" />
           </div>
           <div className="lg:col-span-3 p-8 lg:p-12 text-white">
@@ -26,18 +26,12 @@ export function Consultant() {
               <button onClick={scroll} className="px-6 py-3 rounded-full bg-[var(--gold)] text-[var(--royal-deep)] font-semibold shadow-lg hover:-translate-y-0.5 transition">
                 Request a Consultation
               </button>
-              <a
-                href={`https://wa.me/${CONTACT.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold shadow-lg hover:-translate-y-0.5 transition"
-              >
+              <a href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold shadow-lg hover:-translate-y-0.5 transition">
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
-              <a
-                href={`tel:${CONTACT.phone}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition"
-              >
+              <a href={`tel:${CONTACT.phone}`}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition">
                 <Phone className="w-4 h-4" /> Call Now
               </a>
             </div>
